@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Super Calculadora</title>
+    <script>
+      function calcular() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var resultado;
+
+        resultado = num1 + num2;
+        document.getElementById("soma").innerHTML = "Soma: " + resultado;
+
+        resultado = num1 - num2;
+        document.getElementById("subtracao").innerHTML = "Subtração: " + resultado;
+
+        resultado = num1 / num2;
+        document.getElementById("divisao").innerHTML = "Divisão: " + resultado;
+
+        resultado = num1 * num2;
+        document.getElementById("multiplicacao").innerHTML = "Multiplicação: " + resultado;
+
+        resultado = Math.pow(num1, num2);
+        document.getElementById("potencia").innerHTML = "Potência: " + resultado;
+
+        resultado = Math.sqrt(num1);
+        document.getElementById("raiz").innerHTML = "Raiz: " + resultado;
+
+        var fatorial = 1;
+        for (var i = 1; i <= num1; i++) {
+          fatorial *= i;
+        }
+        resultado = fatorial;
+        document.getElementById("fatorial").innerHTML = "Fatorial: " + resultado;
+
+        resultado = (num1 / 100) * num2;
+        document.getElementById("porcentagem").innerHTML = "Porcentagem: " + resultado;
+
+        resultado = (num1 + num2) / 2;
+        document.getElementById("media").innerHTML = "Média: " + resultado;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Super Calculadora</h1>
+    <form>
+      <input type="text" id="num1" placeholder="Primeiro número">
+      <input type="text" id="num2" placeholder="Segundo número">
+      <input type="button" value="Calcular" onclick="calcular()">
+    </form>
+    <p id="soma"></p>
+    <p id="subtracao"></p>
+    <p id="divisao"></p>
+    <p id="multiplicacao"></p>
+    <p id="potencia"></p>
+    <p id="raiz"></p>
+    <p id="fatorial"></p>
+    <p id="porcentagem"></p>
+    <p id="media"></p>
+  </body>
+</html>
